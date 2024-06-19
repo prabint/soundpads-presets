@@ -1,4 +1,4 @@
-# Sound Pads android app guide
+# Sound Pads Android
 
 Unleash your inner musician with Sound Pads! Turn your Android device into a fun, dynamic soundboard.
 
@@ -20,8 +20,15 @@ Unleash your inner musician with Sound Pads! Turn your Android device into a fun
    * Export and share your customized sound board as well as download boards created by others creators.
 
 ## Demo
-- Video of me playing
-- Video of me editing a board + import/export
+
+### Drums Demo
+
+[![Watch the video](https://img.youtube.com/vi/WfUIvKauVRA/0.jpg)](https://www.youtube.com/watch?v=WfUIvKauVRA)
+
+### Dubstep Demo
+Note: [Samples from Saev](https://soundcloud.com/saevvvvv)
+
+[![Watch the video](https://img.youtube.com/vi/WfUIvKauVRA/0.jpg)](https://www.youtube.com/watch?v=P6hWgaYqewE)
 
 ## Screenshots
 
@@ -73,5 +80,3 @@ Unleash your inner musician with Sound Pads! Turn your Android device into a fun
       </td>
    </tr>
 </table>
-
-## Creating and Editing a Board
