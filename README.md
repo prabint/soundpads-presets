@@ -25,11 +25,6 @@ Unleash your inner musician with Sound Pads! Turn your Android device into a fun
 
 [![Watch the video](https://img.youtube.com/vi/WfUIvKauVRA/0.jpg)](https://www.youtube.com/watch?v=WfUIvKauVRA)
 
-### Dubstep Demo
-Note: [Samples from Saev](https://soundcloud.com/saevvvvv)
-
-[![Watch the video](https://img.youtube.com/vi/WfUIvKauVRA/0.jpg)](https://www.youtube.com/watch?v=P6hWgaYqewE)
-
 ## Screenshots
 
 <table>
@@ -57,26 +52,21 @@ Note: [Samples from Saev](https://soundcloud.com/saevvvvv)
          <figcaption>Edit Pad Options</figcaption>
       </td>
       <td style='text-align:center;'>
-         <img src="app_screenshots/sound_picker_screen.png" alt="Board List Screen" width="200">
+         <img src="app_screenshots/sample_list_screen.png" alt="Board List Screen" width="200">
          <br>
-         <figcaption>Edit Pad Sounds</figcaption>
+         <figcaption>Samples List</figcaption>
       </td>
       <td style='text-align:center;'>
-         <img src="app_screenshots/color_picker_screen.png" alt="Board List Screen" width="200">
+         <img src="app_screenshots/edit_sample_screen.png" alt="Board List Screen" width="200">
          <br>
-         <figcaption>Edit Pad Color</figcaption>
+         <figcaption>Samples Editor</figcaption>
       </td>
    </tr>
    <tr>
-      <td style='text-align:center;'>
-         <img src="app_screenshots/trigger_mode_dialog.png" alt="Board List Screen" width="200">
+    <td style='text-align:center;'>
+         <img src="app_screenshots/color_picker_screen.png" alt="Board List Screen" width="200">
          <br>
-         <figcaption>Pad Trigger Mode Options</figcaption>
-      </td>
-      <td style='text-align:center;'>
-         <img src="app_screenshots/sound_library_screen.png" alt="Board List Screen" width="200">
-         <br>
-         <figcaption>Sound Library Screen</figcaption>
+         <figcaption>Edit Pad Color</figcaption>
       </td>
    </tr>
 </table>
