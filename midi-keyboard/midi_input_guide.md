@@ -1,5 +1,11 @@
 # Use your Android Phone as MIDI Input for DAW
 
+## Demo Video
+
+[![Demo Video](https://img.youtube.com/vi/l_NSxFtmCcs/maxresdefault.jpg)](https://youtu.be/l_NSxFtmCcs)
+
+## Connection Instructions
+
 1. Connect your Android phone to your PC using a `USB data cable` and change usb connection type to `MIDI`.
 
    | <img src="usb_notification.jpeg" width=400> | <img src="usb_settings.jpeg" width=400> |
