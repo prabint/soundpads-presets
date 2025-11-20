@@ -19,6 +19,8 @@ Unleash your inner musician with Sound Pads! Turn your Android device into a fun
 5. **Import/Export Boards**
    * Export and share your customized sound board as well as download boards created by others creators.
 
+6. **Use as Midi Keyboard**
+   * Connet your phone to DAW on your PC as [MIDI Keyboard](midi-keyboard/midi_input_guide.md)
 ## Demo
 
 ### Drums Demo
