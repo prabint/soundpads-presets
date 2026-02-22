@@ -1,0 +1,171 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sound Pads Samples</title>
+    <meta name="description" content="Download Sound Pads sample packs." />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=Sora:wght@500;700&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      :root {
+        --bg: #f2f5ef;
+        --panel: #ffffff;
+        --text: #111b17;
+        --muted: #57675f;
+        --line: #d5ded9;
+        --accent: #0d9f6e;
+        --radius: 14px;
+        --shadow: 0 12px 30px rgba(14, 23, 35, 0.08);
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        margin: 0;
+        font-family: "Space Grotesk", sans-serif;
+        color: var(--text);
+        background: radial-gradient(circle at 0% 0%, #e1eedf, transparent 30%),
+          radial-gradient(circle at 100% 0%, #d7e9f1, transparent 25%), var(--bg);
+      }
+
+      .container {
+        width: min(920px, 92vw);
+        margin: 0 auto;
+      }
+
+      .top {
+        padding: 1.2rem 0 0;
+      }
+
+      .back {
+        color: #1d4f44;
+        text-decoration: none;
+        font-weight: 700;
+      }
+
+      .hero {
+        padding: 1rem 0 1.4rem;
+      }
+
+      h1,
+      h2,
+      h3 {
+        font-family: "Sora", sans-serif;
+      }
+
+      h1 {
+        margin: 0;
+        font-size: clamp(1.6rem, 4vw, 2.5rem);
+      }
+
+      .sub {
+        margin: 0.5rem 0 0;
+        color: var(--muted);
+        max-width: 56ch;
+      }
+
+      .grid {
+        display: grid;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 0.95rem;
+        padding-bottom: 2rem;
+      }
+
+      .card {
+        background: var(--panel);
+        border: 1px solid var(--line);
+        border-radius: var(--radius);
+        padding: 1rem;
+        box-shadow: var(--shadow);
+      }
+
+      .card h3 {
+        margin: 0;
+        font-size: 1.02rem;
+      }
+
+      .meta {
+        margin: 0.5rem 0 0.9rem;
+        color: var(--muted);
+        font-size: 0.94rem;
+      }
+
+      .btn {
+        display: inline-block;
+        text-decoration: none;
+        font-weight: 700;
+        background: var(--accent);
+        color: white;
+        border-radius: 999px;
+        padding: 0.52rem 0.9rem;
+      }
+
+      .btn:hover {
+        filter: brightness(0.94);
+      }
+
+      .note {
+        color: var(--muted);
+        padding-bottom: 2rem;
+        font-size: 0.95rem;
+      }
+
+      @media (max-width: 860px) {
+        .grid {
+          grid-template-columns: repeat(2, minmax(0, 1fr));
+        }
+      }
+
+      @media (max-width: 620px) {
+        .grid {
+          grid-template-columns: 1fr;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container top">
+      <a class="back" href="../index.html">← Back to Sound Pads Home</a>
+    </div>
+
+    <header class="container hero">
+      <h1>Sample Packs</h1>
+      <p class="sub">
+        Download individual sample packs and load them into your own custom boards.
+      </p>
+    </header>
+
+    <main class="container">
+      <section class="grid" aria-label="Sample Downloads">
+        <article class="card">
+          <h3>Fantasia</h3>
+          <p class="meta">ZIP • 61.7 MB</p>
+          <a class="btn" href="Fantasia.zip" download>Download</a>
+        </article>
+
+        <article class="card">
+          <h3>Grand Piano</h3>
+          <p class="meta">ZIP • 37.0 MB</p>
+          <a class="btn" href="Grand%20Piano.zip" download>Download</a>
+        </article>
+
+        <article class="card">
+          <h3>Saw Lead</h3>
+          <p class="meta">ZIP • 78.1 MB</p>
+          <a class="btn" href="Saw%20Lead.zip" download>Download</a>
+        </article>
+      </section>
+
+      <p class="note">
+        If a download opens in-browser on your device, use "Save As" to keep the ZIP file.
+      </p>
+    </main>
+  </body>
+</html>
