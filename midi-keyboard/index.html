@@ -76,10 +76,12 @@
 
       .hero-video {
         margin-top: 1rem;
+        display: inline-block;
         max-width: 720px;
+        text-decoration: none;
       }
 
-      .hero-video video {
+      .hero-video img {
         width: 100%;
         display: block;
         border-radius: var(--radius);
@@ -87,10 +89,9 @@
         box-shadow: var(--shadow);
       }
 
-      .hero-video-link {
+      .hero-video span {
         display: inline-block;
         margin-top: 0.55rem;
-        text-decoration: none;
         font-weight: 700;
         color: #20355b;
       }
@@ -159,14 +160,13 @@
       <p class="subtitle">
         Step-by-step guide to connect Sound Pads to your PC over USB MIDI.
       </p>
-      <div class="hero-video">
-        <video controls preload="metadata" playsinline webkit-playsinline>
-          <source src="../demo/midi_guide_mobile.mp4" type="video/mp4" />
-          <source src="../demo/midi_guide.mp4" type="video/mp4" />
-          Your browser does not support the video tag.
-        </video>
-        <a class="hero-video-link" href="../demo/midi_guide_mobile.mp4">Open MIDI setup demo</a>
-      </div>
+      <a class="hero-video" href="https://youtu.be/l_NSxFtmCcs">
+        <img
+          src="https://img.youtube.com/vi/l_NSxFtmCcs/maxresdefault.jpg"
+          alt="MIDI setup demo video"
+        />
+        <span>Watch MIDI Setup Demo</span>
+      </a>
     </header>
 
     <main class="container steps">

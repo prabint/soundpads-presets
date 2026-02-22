@@ -25,7 +25,7 @@ Unleash your inner musician with Sound Pads! Turn your Android device into a fun
 
 ### Drums Demo
 
-[Watch demo video](demo/midi_guide_mobile.mp4)
+[![Watch the video](https://img.youtube.com/vi/WfUIvKauVRA/0.jpg)](https://www.youtube.com/watch?v=WfUIvKauVRA)
 
 ## Screenshots
 

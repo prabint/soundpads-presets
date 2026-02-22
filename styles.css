@@ -248,14 +248,15 @@ h2 {
   box-shadow: var(--shadow);
 }
 
-.demo-player {
+.demo-link {
   display: grid;
   gap: 0.7rem;
   max-width: 740px;
   margin: 0 auto;
+  text-decoration: none;
 }
 
-.demo-player video {
+.demo-link img {
   width: 100%;
   display: block;
   border-radius: 14px;
@@ -263,13 +264,12 @@ h2 {
   box-shadow: var(--shadow);
 }
 
-.demo-download {
-  text-decoration: none;
+.demo-link span {
   font-weight: 700;
   color: #213146;
 }
 
-.demo-download:hover {
+.demo-link:hover span {
   color: #0f1722;
 }
 
