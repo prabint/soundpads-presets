@@ -18,7 +18,7 @@
           --text: #111726;
           --muted: #556176;
           --line: #d4dde6;
-          --accent: #ff6b35;
+          --accent: #0d9f6e;
           --radius: 14px;
           --shadow: 0 12px 30px rgba(14, 23, 35, 0.08);
         }
@@ -78,6 +78,25 @@
           padding-bottom: 2rem;
         }
 
+        .search-wrap {
+          margin: 0 0 1rem;
+        }
+
+        .search-input {
+          width: 100%;
+          border: 1px solid var(--line);
+          border-radius: 10px;
+          padding: 0.62rem 0.75rem;
+          font: inherit;
+          color: var(--text);
+          background: #fff;
+        }
+
+        .search-input:focus {
+          outline: 2px solid #ffd3c3;
+          outline-offset: 1px;
+        }
+
         .card {
           background: var(--panel);
           border: 1px solid var(--line);
@@ -117,6 +136,53 @@
           font-size: 0.95rem;
         }
 
+        .modal-backdrop {
+          position: fixed;
+          inset: 0;
+          background: rgba(8, 18, 22, 0.55);
+          display: none;
+          align-items: center;
+          justify-content: center;
+          padding: 1rem;
+          z-index: 1000;
+        }
+
+        .modal-backdrop.open {
+          display: flex;
+        }
+
+        .modal {
+          width: min(520px, 96vw);
+          background: #ffffff;
+          border: 1px solid var(--line);
+          border-radius: var(--radius);
+          box-shadow: var(--shadow);
+          padding: 1rem;
+        }
+
+        .modal h3 {
+          margin: 0;
+          font-size: 1.06rem;
+        }
+
+        .modal p {
+          margin: 0.6rem 0 0;
+          color: var(--muted);
+        }
+
+        .modal-actions {
+          margin-top: 1rem;
+          display: flex;
+          gap: 0.6rem;
+          justify-content: flex-end;
+        }
+
+        .btn-light {
+          border: 1px solid var(--line);
+          background: #fff;
+          color: var(--text);
+        }
+
         @media (max-width: 860px) {
           .grid {
             grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -144,23 +210,32 @@
 </header>
 
 <main class="container">
+    <div class="search-wrap">
+        <input
+                id="preset-search"
+                class="search-input"
+                type="search"
+                placeholder="Search preset pack by name (e.g., Rock, Piano)"
+                aria-label="Search preset packs by name"
+        />
+    </div>
     <section class="grid" aria-label="Preset Downloads">
         <article class="card">
             <h3>Synth Board</h3>
             <p class="meta">ZIP • 16.6 MB</p>
-            <a class="btn" href="(Demo)%20Synth%20Board.zip" download>Download</a>
+            <a class="btn preset-download" href="(Demo)%20Synth%20Board.zip" download>Download</a>
         </article>
 
         <article class="card">
             <h3>Rock Drumkit</h3>
             <p class="meta">ZIP • 1.5 MB</p>
-            <a class="btn" href="(Demo)%20Rock%20Drumkit.zip" download>Download</a>
+            <a class="btn preset-download" href="(Demo)%20Rock%20Drumkit.zip" download>Download</a>
         </article>
 
         <article class="card">
             <h3>Grand Piano</h3>
             <p class="meta">ZIP • 23.7 MB</p>
-            <a class="btn" href="(Demo)%20Grand%20Piano.zip" download>Download</a>
+            <a class="btn preset-download" href="(Demo)%20Grand%20Piano.zip" download>Download</a>
         </article>
     </section>
 
@@ -168,5 +243,82 @@
         If a download opens in-browser on your device, use "Save As" to keep the ZIP file.
     </p>
 </main>
+<div class="modal-backdrop" id="download-modal" aria-hidden="true">
+    <div class="modal" role="dialog" aria-modal="true" aria-labelledby="download-modal-title">
+        <h3 id="download-modal-title">After Download</h3>
+        <p>Directly import the <code>.zip</code> file from the app. No need to unzip.</p>
+        <div class="modal-actions">
+            <button class="btn btn-light" type="button" id="download-cancel">Cancel</button>
+            <button class="btn" type="button" id="download-start">Start Download</button>
+        </div>
+    </div>
+</div>
+<script>
+    (function () {
+      var searchInput = document.getElementById("preset-search");
+      var cards = Array.prototype.slice.call(document.querySelectorAll(".grid .card"));
+      var modal = document.getElementById("download-modal");
+      var startBtn = document.getElementById("download-start");
+      var cancelBtn = document.getElementById("download-cancel");
+      var pendingHref = null;
+
+      function filterCards(query) {
+        var q = query.trim().toLowerCase();
+        cards.forEach(function (card) {
+          var nameEl = card.querySelector("h3");
+          var name = nameEl ? nameEl.textContent.toLowerCase() : "";
+          card.style.display = !q || name.indexOf(q) !== -1 ? "" : "none";
+        });
+      }
+
+      function openModal(href) {
+        pendingHref = href;
+        modal.classList.add("open");
+        modal.setAttribute("aria-hidden", "false");
+      }
+
+      function closeModal() {
+        modal.classList.remove("open");
+        modal.setAttribute("aria-hidden", "true");
+        pendingHref = null;
+      }
+
+      document.querySelectorAll(".preset-download").forEach(function (link) {
+        link.addEventListener("click", function (event) {
+          event.preventDefault();
+          openModal(link.getAttribute("href"));
+        });
+      });
+
+      startBtn.addEventListener("click", function () {
+        if (!pendingHref) return;
+        var a = document.createElement("a");
+        a.href = pendingHref;
+        a.setAttribute("download", "");
+        document.body.appendChild(a);
+        a.click();
+        a.remove();
+        closeModal();
+      });
+
+      cancelBtn.addEventListener("click", closeModal);
+
+      modal.addEventListener("click", function (event) {
+        if (event.target === modal) closeModal();
+      });
+
+      document.addEventListener("keydown", function (event) {
+        if (event.key === "Escape" && modal.classList.contains("open")) {
+          closeModal();
+        }
+      });
+
+      if (searchInput) {
+        searchInput.addEventListener("input", function () {
+          filterCards(searchInput.value);
+        });
+      }
+    })();
+</script>
 </body>
 </html>
