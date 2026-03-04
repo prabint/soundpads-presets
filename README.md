@@ -4,7 +4,19 @@ Play, record, and share your own sound pads.
 
 A simple way to build custom boards for drums, keys, loops, and live sessions directly on your phone.
 
+[Website](https://prabint.github.io/soundpads-presets/)
+
 [Get it on Google Play](https://play.google.com/store/apps/details?id=prabin.timsina.soundpads)
+
+## Downloadables
+
+- [Presets](presets/)
+- [Sample Packs](samples/)
+
+## Guides
+
+- [MIDI Setup Guide](midi-keyboard/)
+- [Custom Board Guide](https://www.youtube.com/shorts/-Y8pCTs9N5c)
 
 ## Features
 
