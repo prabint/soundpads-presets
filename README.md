@@ -10,12 +10,12 @@ A simple way to build custom boards for drums, keys, loops, and live sessions di
 
 ## Downloadables
 
-- [Presets](presets/)
-- [Sample Packs](samples/)
+- [Presets](https://prabint.github.io/soundpads-presets/presets/)
+- [Sample Packs](https://prabint.github.io/soundpads-presets/samples/)
 
 ## Guides
 
-- [MIDI Setup Guide](midi-keyboard/)
+- [MIDI Setup Guide](https://prabint.github.io/soundpads-presets/midi-keyboard/)
 - [Custom Board Guide](https://www.youtube.com/shorts/-Y8pCTs9N5c)
 
 ## Features
