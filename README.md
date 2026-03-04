@@ -1,26 +1,31 @@
-# Sound Pads Android
+# Sound Pads
 
-Unleash your inner musician with Sound Pads! Turn your Android device into a fun, dynamic soundboard.
+Play, record, and share your own sound pads.
+
+A simple way to build custom boards for drums, keys, loops, and live sessions directly on your phone.
+
+[Get it on Google Play](https://play.google.com/store/apps/details?id=prabin.timsina.soundpads)
 
 ## Features
 
-1. **Jam in Real-Time**
-   * Tap and play instantly. Drums, keyboards, and more!
+1. **Real-time Playing**
+   * Tap pads instantly for smooth jam sessions and practice.
 
-2. **Record Your Tracks**
-   * Save your music and share it anytime.
+2. **Recording**
+   * Capture your takes and revisit your ideas whenever needed.
 
-3. **Stay on Beat**
-   * Use the metronome to keep perfect timing.
+3. **Metronome**
+   * Keep your rhythm steady while learning or building tracks.
 
-4. **Create Your Style**
-   * Customize your soundboard however you like.
+4. **Custom Boards**
+   * Adjust samples, names, and pad colors to fit your setup.
 
-5. **Import/Export Boards**
-   * Export and share your customized sound board as well as download boards created by others creators.
+5. **Import and Export**
+   * Share your board presets and load packs from others.
 
-6. **Use as Midi Keyboard**
-   * Connet your phone to DAW on your PC as [MIDI Keyboard](midi-keyboard/midi_input_guide.md)
+6. **MIDI Mode**
+   * Connect your phone to a DAW and use it as a [MIDI controller](midi-keyboard/midi_input_guide.md).
+
 ## Demo
 
 ### Drums Demo
