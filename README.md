@@ -82,10 +82,15 @@ A simple way to build custom boards for drums, keys, loops, and live sessions di
       </td>
    </tr>
    <tr>
-    <td style='text-align:center;'>
+      <td style='text-align:center;'>
          <img src="app_screenshots/color_picker_screen.png" alt="Board List Screen" width="200">
          <br>
          <figcaption>Edit Pad Color</figcaption>
+      </td>
+      <td style='text-align:center;'>
+         <img src="app_screenshots/trim_recording_screen.png" alt="Trim Recording Screen" width="200">
+         <br>
+         <figcaption>Trim Recording</figcaption>
       </td>
    </tr>
 </table>
