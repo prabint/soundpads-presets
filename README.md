@@ -16,7 +16,7 @@ A simple way to build custom boards for drums, keys, loops, and live sessions di
 ## Guides
 
 - [MIDI Setup Guide](https://prabint.github.io/soundpads-presets/midi-keyboard/)
-- [Custom Board Guide](https://www.youtube.com/shorts/-Y8pCTs9N5c)
+- [Custom Board Guide](https://prabint.github.io/soundpads-presets/custom-board/)
 
 ## Features
 

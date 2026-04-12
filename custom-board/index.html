@@ -1,0 +1,308 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sound Pads Custom Board Guide</title>
+    <meta
+      name="description"
+      content="Step-by-step guide to create a custom board in Sound Pads for Android."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&amp;family=Sora:wght@500;700&amp;display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      :root {
+        --bg: #f5f8fb;
+        --panel: #ffffff;
+        --text: #141824;
+        --muted: #4d5a6a;
+        --line: #d8e0e8;
+        --accent: #17bebb;
+        --accent-dark: #0d7473;
+        --radius: 8px;
+        --shadow: 0 12px 28px rgba(10, 17, 28, 0.1);
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        margin: 0;
+        font-family: "Space Grotesk", sans-serif;
+        color: var(--text);
+        background: linear-gradient(180deg, #f8fbfd 0%, var(--bg) 100%);
+        line-height: 1.5;
+      }
+
+      img {
+        display: block;
+        max-width: 100%;
+      }
+
+      h1,
+      h2,
+      h3 {
+        font-family: "Sora", sans-serif;
+      }
+
+      .container {
+        width: min(980px, 92vw);
+        margin: 0 auto;
+      }
+
+      .top {
+        padding: 1.2rem 0 0;
+      }
+
+      .back {
+        color: var(--accent-dark);
+        text-decoration: none;
+        font-weight: 700;
+      }
+
+      header {
+        padding: 1rem 0 1.4rem;
+      }
+
+      h1 {
+        margin: 0;
+        font-size: clamp(1.7rem, 4vw, 2.5rem);
+        line-height: 1.15;
+      }
+
+      .subtitle {
+        margin: 0.6rem 0 0;
+        max-width: 64ch;
+        color: var(--muted);
+      }
+
+      .video {
+        margin-top: 1.2rem;
+        max-width: 420px;
+      }
+
+      .video-frame {
+        aspect-ratio: 9 / 16;
+        width: 100%;
+        border: 1px solid var(--line);
+        border-radius: var(--radius);
+        box-shadow: var(--shadow);
+        overflow: hidden;
+        background: #101820;
+      }
+
+      .video-frame iframe {
+        width: 100%;
+        height: 100%;
+        border: 0;
+      }
+
+      .video-link {
+        display: inline-block;
+        margin-top: 0.55rem;
+        color: var(--accent-dark);
+        font-weight: 700;
+      }
+
+      .steps {
+        padding: 0 0 2rem;
+      }
+
+      h2 {
+        margin: 0 0 1rem;
+        font-size: 1.35rem;
+      }
+
+      .step {
+        display: grid;
+        grid-template-columns: minmax(0, 1fr) minmax(220px, 320px);
+        gap: 1rem;
+        align-items: start;
+        margin-bottom: 0.9rem;
+        padding: 1rem;
+        background: var(--panel);
+        border: 1px solid var(--line);
+        border-radius: var(--radius);
+        box-shadow: var(--shadow);
+      }
+
+      .step h3 {
+        margin: 0 0 0.45rem;
+        font-size: 1.02rem;
+      }
+
+      .step p {
+        margin: 0;
+        color: var(--muted);
+      }
+
+      .step img {
+        width: 100%;
+        border: 1px solid var(--line);
+        border-radius: var(--radius);
+        background: #111923;
+      }
+
+      .tip {
+        margin-top: 0.6rem;
+        font-weight: 700;
+        color: #243244;
+      }
+
+      @media (max-width: 760px) {
+        .step {
+          grid-template-columns: 1fr;
+        }
+
+        .video {
+          max-width: 100%;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container top">
+      <a class="back" href="../index.html">Back to Sound Pads Home</a>
+    </div>
+
+    <header class="container">
+      <h1>Create a Custom Board in Sound Pads</h1>
+      <p class="subtitle">
+        Build your own board, add samples, name and color a pad, then adjust the
+        board layout when you need to.
+      </p>
+      <div class="video" aria-label="Custom board guide video">
+        <div class="video-frame">
+          <iframe
+            src="https://www.youtube.com/embed/-Y8pCTs9N5c"
+            title="Custom Board Guide video"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            allowfullscreen
+          ></iframe>
+        </div>
+        <a
+          class="video-link"
+          href="https://www.youtube.com/shorts/-Y8pCTs9N5c"
+          target="_blank"
+          rel="noopener noreferrer"
+          >Open the video on YouTube</a
+        >
+      </div>
+    </header>
+
+    <main class="container steps">
+      <h2>Step-by-step Tutorial</h2>
+
+      <article class="step">
+        <div>
+          <h3>1. Add a new board</h3>
+          <p>
+            From the board list, tap Add Board and choose Create New Board.
+          </p>
+        </div>
+        <img src="screenshots/step-01-add-board.jpg" alt="Add board menu" />
+      </article>
+
+      <article class="step">
+        <div>
+          <h3>2. Tap a pad in the editor</h3>
+          <p>
+            The new board opens in edit mode. Tap a pad at the bottom to start
+            customizing it.
+          </p>
+        </div>
+        <img src="screenshots/step-02-edit-board.jpg" alt="New board edit screen" />
+      </article>
+
+      <article class="step">
+        <div>
+          <h3>3. Open the sound option</h3>
+          <p>
+            In Edit Options, choose Sound. Use this menu later if you want to
+            clone, vibrate, rename, recolor, or delete the pad.
+          </p>
+        </div>
+        <img src="screenshots/step-03-pad-options.jpg" alt="Pad edit options" />
+      </article>
+
+      <article class="step">
+        <div>
+          <h3>4. Select samples</h3>
+          <p>
+            Tap the wave button, choose one or more samples, then tap Select.
+          </p>
+        </div>
+        <img src="screenshots/step-04-select-samples.jpg" alt="Selected sample list" />
+      </article>
+
+      <article class="step">
+        <div>
+          <h3>5. Adjust the sample</h3>
+          <p>
+            Tap a sample to adjust its volume, pan, and playback mode. Tap Back
+            when the sample plays the way you want.
+          </p>
+        </div>
+        <img src="screenshots/step-05-sample-settings.jpg" alt="Sample settings screen" />
+      </article>
+
+      <article class="step">
+        <div>
+          <h3>6. Name the pad</h3>
+          <p>
+            Return to Edit Options and enter a clear pad name.
+          </p>
+        </div>
+        <img src="screenshots/step-06-name-pad.jpg" alt="Pad name field" />
+      </article>
+
+      <article class="step">
+        <div>
+          <h3>7. Set the pad color</h3>
+          <p>
+            Pick a pad color that makes the sound easy to spot while you play.
+          </p>
+        </div>
+        <img src="screenshots/step-07-color-pad.jpg" alt="Pad color picker" />
+      </article>
+
+      <article class="step">
+        <div>
+          <h3>8. Return to the board</h3>
+          <p>
+            Tap OK, then Back. Your pad is ready on the board.
+          </p>
+        </div>
+        <img src="screenshots/step-08-board-ready.jpg" alt="Board with named pad" />
+      </article>
+
+      <article class="step">
+        <div>
+          <h3>9. Edit the board later</h3>
+          <p>
+            Open the three-dot menu and choose Edit Board when you want to make
+            more changes.
+          </p>
+        </div>
+        <img src="screenshots/step-09-edit-later.jpg" alt="Board menu with edit option" />
+      </article>
+
+      <article class="step">
+        <div>
+          <h3>10. Adjust board layout</h3>
+          <p>
+            Add pads, clone an existing pad, change the overall volume, set pads
+            per row, or rename the board.
+          </p>
+          <p class="tip">Tap Back when you are done. The board is ready to use.</p>
+        </div>
+        <img src="screenshots/step-10-board-layout.jpg" alt="Board layout settings" />
+      </article>
+    </main>
+  </body>
+</html>
